@@ -1,13 +1,21 @@
 const getSumBtn = document.createElement("button");
 getSumBtn.append("Get Total Price");
 document.body.appendChild(getSumBtn);
-
-let tr = document.createElement("tr");
-tr.setAttribute("id","ans");
+const price = document.getElementsByClassName("price");
 const getSum = () => {
-	tr.innerText = 410 + " " + 333;
+//Add your code here
+	let val = 0;
+    let val1 = price[0].innerText;
+val += parseInt(price[0].innerText) 
+val += parseInt(price[1].innerText) 
+val += parseInt(price[2].innerText) 
+val += parseInt(price[3].innerText)
+val += parseInt(price[4].innerText) 
+
+const p = document.createElement("p");
+p.innerText = val;
+	p.id = "ans";
+document.body.appendChild(p);
 };
-table.appendChild(tr);
 
 getSumBtn.addEventListener("click", getSum);
-
